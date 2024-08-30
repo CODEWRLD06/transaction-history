@@ -1,0 +1,142 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    width: 100%;
+    background-color: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-content {
+    max-width: 400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-content h1 {
+    font-size: 1.5rem;
+    color: #1dbf73;
+}
+
+.header-links a {
+    margin-left: 15px;
+    font-size: 0.9rem;
+    color: #333;
+    text-decoration: none;
+}
+
+.header-links a:hover {
+    color: #1dbf73;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 400px;
+    margin-top: 80px;
+    padding: 0 20px;
+}
+
+.container {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    color: #1dbf73;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+li {
+    padding: 15px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.transaction-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.transaction-info .description {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.transaction-info .date {
+    font-size: 0.8rem;
+    color: #999;
+    margin-top: 5px;
+}
+
+.transaction-amount {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.transaction-type.deposit {
+    color: #4CAF50;
+}
+
+.transaction-type.received {
+    color: #FF9800;
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 400px) {
+    header {
+        padding: 10px;
+    }
+
+    main {
+        margin-top: 70px;
+        padding: 0 10px;
+    }
+
+    h2 {
+        font-size: 1rem;
+    }
+
+    li {
+        padding: 10px;
+    }
+
+    .transaction-amount {
+        font-size: 0.9rem;
+    }
+}
